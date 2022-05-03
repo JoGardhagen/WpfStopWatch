@@ -23,6 +23,7 @@ namespace WpfStopWatch
     {
         Time time = new Time ("0:0:0:0"); 
         private const string clocka = "00:00:00:00";
+        bool running = false;
 
         public MainWindow()
         {
@@ -39,19 +40,21 @@ namespace WpfStopWatch
         {
             //DateTime myDate = DateTime.Now;
            Application.Current.Dispatcher.Invoke(() => {
-                time.oneSecondPassed();
-                //if (running == true) { time.oneSecondPassed(); }
+                //time.oneSecondPassed();
+                if (running == true) { time.oneSecondPassed(); }
 
                 clock.Content = time.getCurrentTime();
             });
         }
         private void startStopClick(object sender, RoutedEventArgs e)
         {
-
+            if (running == false) { running = true; }
+            else running = false;
         }
         private void resetClick(object sender ,RoutedEventArgs e)
         {
-
+            running = false;
+            time.timeReset("0:0:0:0");
         }
     }
 }
