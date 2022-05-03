@@ -1,3 +1,3 @@
 # WpfStopWatch
 ##
-<img src="\WpfStopWatch\WpfStopWatch\screenDumpWpfStopWatch.png">
+<img src="screenDumpWpfStopWatch.png">
