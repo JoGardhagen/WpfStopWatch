@@ -49,7 +49,13 @@ namespace WpfStopWatch
         private void startStopClick(object sender, RoutedEventArgs e)
         {
             if (running == false) { running = true; }
-            else running = false;
+            else
+            {
+                running = false;
+                DateTime myDate = DateTime.Now;
+                string onThaClock = clock.Content + " , " + myDate.ToString();
+                savedLog.Items.Add(onThaClock);
+            }
         }
         private void resetClick(object sender ,RoutedEventArgs e)
         {

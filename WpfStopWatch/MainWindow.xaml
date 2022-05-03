@@ -10,5 +10,8 @@
         <Label x:Name="clock" HorizontalAlignment="Center" FontSize="40">0:0:0:0</Label>
         <Button x:Name="startStopButton" Click="startStopClick" FontSize="30" Margin="30">Start/Stop</Button>
         <Button x:Name="resetButton" Click="resetClick" FontSize="30" Margin="30">Reset</Button>
+
+        <ListBox x:Name="savedLog" Height="60" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="False"/>
+        
     </StackPanel>
 </Window>
